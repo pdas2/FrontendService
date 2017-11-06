@@ -1,0 +1,74 @@
+<div class="container" style="margin-top: 10px">
+	<div id="accordion" role="tablist">
+		<div class="card">
+			<div class="card-header bg-dark" role="tab" id="headingOne">
+				<h5 class="mb-0">
+					<a href="javascript:;" data-toggle="collapse"
+						data-target="#collapseOne" aria-expanded="true"
+						aria-controls="collapseOne" style="text-decoration: none;color: #ffffff"> Confirm Order </a>
+				</h5>
+			</div>
+
+			<div id="collapseOne" class="collapse show" role="tabpanel"
+				aria-labelledby="headingOne" data-parent="#accordion">
+				<div class="card-body">
+					<div class="row" ng-repeat="item in cart.items | orderBy:'name'"
+						style="margin-bottom: 20px">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<h4 class="card-title">{{item.name | filter:searchStr}}</h4>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+							<p class="card-text">Quantity :{{item.quantity}}</p>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+							<p class="card-text">{{item.price|currency }}</p>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<h4 class="card-title">
+								<b>Total</b>
+							</h4>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+							<p class="card-text">{{cart.getTotalPrice() | currency}}</p>
+						</div>
+					</div>
+					<div class="row justify-content-end">
+						<a href="javascript:;" class="collapsed btn btn-warning"
+							data-toggle="collapse" data-target="#collapseTwo"
+							aria-expanded="false" aria-controls="collapseTwo"> Place
+							Order </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header bg-dark" role="tab" id="headingTwo">
+				<h5 class="mb-0">
+					<a href="javascript:;" class="collapsed" data-toggle="collapse"
+						data-target="#collapseTwo" aria-expanded="false"
+						aria-controls="collapseTwo" style="text-decoration: none;color: #ffffff"> Delivery Address </a>
+				</h5>
+			</div>
+			<div id="collapseTwo" class="collapse" role="tabpanel"
+				aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<address>
+						<strong>Twitter, Inc.</strong><br> 1355 Market St, Suite 900<br>
+						San Francisco, CA 94103<br> <abbr title="Phone">P:</abbr>
+						(123) 456-7890
+					</address>
+
+					<address>
+						<strong>Full Name</strong><br> <a href="mailto:#">first.last@example.com</a>
+					</address>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

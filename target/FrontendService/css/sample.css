@@ -1,0 +1,196 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 21, 2017, 4:23:04 PM
+    Author     : Srikiran
+*/
+body {
+	background-color: #E6E6E6
+	
+}
+
+#loginPage {
+	background-image: url("./img/logo.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 98% 14%;
+	background-color: #ffffff;
+}
+
+#logindiv {
+	
+}
+
+.active a {
+	color: #ffffff;
+}
+
+ul .nav {
+	width: 100%;
+}
+
+#itemfooter {
+	height: 49px
+}
+
+#carticon {
+	margin: -4px 10px 0px 0px;
+	color: #ffffff;
+}
+
+.item_card {
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .23), inset 1px 1px 0 0
+		rgba(255, 255, 255, .2);
+}
+
+.card_item {
+	background-color: #ffffff;
+}
+
+.item_body {
+	background-color: #ffffff;
+}
+
+.bg-red {
+	background-color: #204289;
+}
+
+.btn-red {
+	background-color: #204289;
+	padding: .3rem 0.55rem;
+	border-radius: 5px;
+}
+
+.item_card .card-body {
+	height: 268px;
+}
+
+.filter_item {
+	padding: 0.25rem;
+}
+
+sup {
+	font-size: 0.5em;
+	vertical-align: super;
+}
+
+.space-bot {
+	margin-bottom: 35px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+input:required {
+	box-shadow: none;
+}
+/* input:invalid {
+    box-shadow:0 0 3px red;
+} */
+.Contact h2 {
+	font-size: 72px;
+	text-align: center;
+	margin: 65px 0px 15px 0px;
+	font-family: "rockwellregular", serif;
+	color: #333333;
+}
+
+.mainContent {
+	width: 1024px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.mainContent p {
+	font-size: 18px;
+	text-align: center;
+	margin: 0px 0px 50px 0px;
+}
+
+.mainContent ul {
+	display: inline-block;
+	width: 380px;
+	float: left;
+	margin-left: 110px;
+	margin-bottom: 35px;
+	list-style-type: none;
+}
+
+.mainContent #corpHQ {
+	background: left 5px no-repeat;
+}
+
+.mainContent #mailAdd {
+	background: left 5px no-repeat;
+}
+
+.mainContent #emailAdd {
+	background: left 5px no-repeat;
+}
+
+.mainContent #phoneNum {
+	background: left 5px no-repeat;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 60px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	line-height: 60px; /* Vertically center the text there */
+	background-color: #f5f5f5;
+}
+
+.footer ul {
+	margin: 0 10px 0 0;
+	padding: 5px 20px 0 0;
+	float: right;
+	padding-top: 0px;
+}
+
+.footer ul li {
+	list-style: none;
+	display: inline;
+	padding: 0 13px 0 0;
+}
+
+.footer ul li a {
+	color: #6e7782;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+body>.container {
+	padding: 60px 15px 0;
+}
+
+.footer>.container {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+code {
+	font-size: 80%;
+}
+
+div[back-img]{
+   
+}

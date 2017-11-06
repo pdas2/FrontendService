@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>MicroServices</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/sample.css">
+<script>
+	// Copyright 2014-2017 The Bootstrap Authors
+	// Copyright 2014-2017 Twitter, Inc.
+	// Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement('style')
+		msViewportStyle.appendChild(document
+				.createTextNode('@-ms-viewport{width:auto!important}'))
+		document.head.appendChild(msViewportStyle)
+	}
+</script>
+</head>
+<body>
+	<div class="container-fliud">
+		<nav ng-controller="headerCtrl"
+			class="navbar navbar-expand-lg navbar-dark bg-red">
+			<a class="navbar-brand" href="#/">Shopping Cart</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+
+				</ul>
+
+
+				<ul class="navbar-nav">
+					<li class="nav-item active"><a class="nav-link" href="#/">Home
+							<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#/contact">Contact
+							Us</a></li>
+					<li ng-click="checkWhetherLoginorNot()" class="nav-item"
+						style="margin-top: 7px"><a style="color: #ffffff"><i
+							class="fa fa-shopping-cart" aria-hidden="true"></i> <sup
+							class="badge badge-secondary">{{items.length}}</sup></a></li>
+					<li ng-show="!isLogin" class="nav-item"><a class="nav-link"
+						href="#/login">Login</a></li>
+					<li ng-show="isLogin" class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="http://example.com"
+						id="navbarDropdownMenuLink" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false"> My Account </a>
+						<div class="dropdown-menu"
+							aria-labelledby="navbarDropdownMenuLink"
+							style="min-width: 8.4rem;">
+							<a ng-click="logout()" class="dropdown-item" href="#/">Logout</a>
+						</div></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div ng-view></div>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-8 col-sm-6">
+						<p class="copyright">Copyright © 2012 AmerisourceBergen - All
+							Rights Reserved.</p>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<ul>
+							<li><a href="#/terms">Terms &amp; Conditions</a></li>
+							<li>|</li>
+							<li><a href="#/policy">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- Content here -->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+		integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+		integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+		crossorigin="anonymous"></script>
+
+	<!-- Optional AngularJS -->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.js"></script>
+	<script type="text/javascript" src="js/angular-animate.js"></script>
+	<script type="text/javascript" src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+	<script type="text/javascript" src="js/sample.js"></script>
+	<script src="js/store.js" type="text/javascript"></script>
+    <script src="js/shoppingCart.js" type="text/javascript"></script>
+</body>
+</html>

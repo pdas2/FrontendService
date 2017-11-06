@@ -1,0 +1,105 @@
+<div class="container-fluid" style="margin: 10px 0px">
+	<div class="row" style="margin-bottom: 10px">
+		<div class="col-lg-2 col-md-3 col-sm-2"></div>
+		<div class="col-lg-8 col-md-6 col-sm-8">
+			<form>
+				<div class="form-row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<input type="text" class="form-control"
+							placeholder="Search Here...." ng-model="searchStr"
+							style="border-radius: 16px;">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-lg-2 col-md-3 col-sm-2"></div>
+	</div>
+	<div class="row">
+		<div class="col-lg-3 col-md-3 col-sm-4">
+			<div class="card">
+				<div class="card-header bg-red" id="MEDICINES">
+					<h5 class="card-title" style="color: #ffffff">MEDICINES</h5>
+				</div>
+				<div class="card-body filter_item">
+					<div class="list-group">
+						<div id="10002" class="card-header collapsed"
+							data-toggle="collapse" data-target="#CAT_10002SubCategories">
+							<h6>
+								<a class="text-default" href="javascript:;"
+									style="text-decoration: none; color: #000">
+									Gastrointestinal &amp; Hepatobiliary System</a>
+							</h6>
+						</div>
+						<div id="CAT_10002SubCategories" class="collapse" role="tabpanel"
+							aria-expanded="false">
+							
+								<ul class="list-group" >
+								<li class="list-group-item" ng-repeat="category in categories| slice:0:10">
+									<div class="form-check" >
+										<label class="form-check-label"> <input
+											class="form-check-input" type="checkbox" value=""
+											 ng-model="category.on">
+											{{category.categoryName}}
+										</label>
+									</div>
+								</li>
+								
+							</ul>
+							
+						</div>
+					</div>
+					<div class="list-group">
+						<div id="10013" class="card-header collapsed"
+							data-toggle="collapse" data-target="#CAT_10013SubCategories">
+							<h6>
+								<a class="text-default" href="javascript:;"
+									style="text-decoration: none; color: #000"> Cardiovascular
+									&amp; Hematopoietic system</a>
+							</h6>
+						</div>
+						<div id="CAT_10013SubCategories" class="panel-collapse collapse"
+							aria-expanded="false">
+							<ul class="list-group">
+								
+								<li class="list-group-item" ng-repeat="category in categories| slice:11:28">
+									<div class="form-check">
+										<label class="form-check-label"> <input
+											class="form-check-input" type="checkbox" value=""
+											 ng-model="category.on">
+											{{category.categoryName}}
+										</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-9 col-md-9 col-sm-8">
+			<div class="row">
+				<div class="col-lg-3 col-md-4 col-sm-6"
+					ng-repeat="item in items| filter:searchStr | customFilter:(categories|filter:{on:true})"
+					style="margin-bottom: 20px">
+					<div class="card item_card" ">
+						<div class="card-body item_body" back-img={{item.imageSrc}} > 
+                         
+							<h4 class="card-title">{{item.itemName}}</h4>
+							<p class="card-text">{{item.itemCatagory}}</p>
+							<p class="card-text">{{item.itemDesc}}</p>
+							<p class="card-text">{{item.itemPrice|currency }}</p>
+						</div>
+						<div class="card-footer card_item" id="itemfooter">
+							<div class="row justify-content-center">
+								<a class="btn btn-red" href=""
+									ng-click="cart.addItem(item.itemNo,item.itemName,item.itemPrice, 1)"
+									id="carticon"> Add To Cart	</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
